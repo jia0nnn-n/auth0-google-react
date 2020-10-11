@@ -36,6 +36,13 @@ function Auth() {
         let now = new Date().getTime()
         return now < expiredAt
     }
+
+    this.logout = () => {
+        localStorage.removeItem('access_token')
+        localStorage.removeItem('id_token')
+        localStorage.removeItem('expires_at')
+        window.location.pathname = LOGIN_FAILED_PAGE
+    }
 }
 
 export default Auth;
