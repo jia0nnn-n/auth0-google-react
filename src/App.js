@@ -12,9 +12,9 @@ function App(props) {
       component = <Index state={props.state} />;
       break;
     case "user-privacy":
-      component = <SafeZone state={props.state} />;
+      let result = props.state.auth.isAuthenticated()
+      component = result ? <SafeZone state={props.state} /> : <NotFound />;
       break;
-      // callback
     case "va":
       component = <Transition state={props.state} />;
       break;

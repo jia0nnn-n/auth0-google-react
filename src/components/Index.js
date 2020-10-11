@@ -4,8 +4,12 @@ function Index(props) {
     console.log(props)
     return (
         <div>
-            <a href="/user-privacy">going to my safe zone</a>
-            <button onClick={props.state.auth.login}>Login</button>
+            <p>Hello</p>
+            <a href="/user-privacy">Go to my safe zone</a> :
+
+            {!props.state.auth.isAuthenticated() &&
+                <button onClick={props.state.auth.login}>Go Login First</button>
+            }
         </div>
     );
 }
