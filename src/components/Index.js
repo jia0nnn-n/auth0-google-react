@@ -1,14 +1,14 @@
 import React from 'react';
+import { login, isAuthenticated } from '../Auth';
 
-function Index(props) {
-    console.log(props)
+function Index() {
     return (
         <div>
             <p>Hello</p>
             <a href="/user-privacy">Go to my safe zone</a> :
 
-            {!props.state.auth.isAuthenticated() &&
-                <button onClick={props.state.auth.login}>Go Login First</button>
+            {
+                !isAuthenticated() && <button onClick={login}>Go Login First</button>
             }
         </div>
     );

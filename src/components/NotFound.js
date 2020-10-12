@@ -1,9 +1,7 @@
 
 import React from 'react';
 
-function NotFound(props) {
-
-    // do validation, then redirect.
+function NotFound() {
     return (
         <div>
             Unknown field

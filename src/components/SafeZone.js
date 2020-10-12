@@ -1,10 +1,11 @@
 import React from 'react';
+import { logout } from '../Auth';
 
-function SafeZone(props) {
+function SafeZone() {
     return (
         <div>
             <p>This entry let user do some private actions.</p>
-            <button onClick={props.state.auth.logout}>Logout</button>
+            <button onClick={logout}>Logout</button>
         </div>
     );
 }

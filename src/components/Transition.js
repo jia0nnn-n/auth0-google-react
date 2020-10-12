@@ -1,12 +1,10 @@
 import React from 'react';
 import { useEffect } from 'react';
-import Auth from '../Auth';
+import { validate } from '../Auth';
 
-function Transition(props) {
-
+function Transition() {
     useEffect(() => {
-        const auth = new Auth()
-        auth.validate()
+        validate()
     }, [])
     return (
         <div>
