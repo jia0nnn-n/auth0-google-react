@@ -30,3 +30,4 @@ const auth = new auth0.WebAuth({
 ## Articles and Tool
 https://jwt.io/
 https://auth0.com/
+https://auth0.com/docs/libraries/auth0js#webauth-popup-authorize-
