@@ -11,7 +11,7 @@ function Auth() {
         redirectUri: 'http://localhost:3000/va',
         audience: 'https://dev--fjtj9b2.us.auth0.com/userinfo',
         responseType: 'token id_token',
-        scope: 'openid'
+        scope: 'openid profile'
     })
 
     this.login = () => auth.authorize()
