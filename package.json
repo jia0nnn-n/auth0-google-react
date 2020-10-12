@@ -1,6 +1,7 @@
 {
   "name": "auth0-google-react",
   "version": "0.1.0",
+  "homepage": "https://jia0nnn-n.github.io/auth0-google-react/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
