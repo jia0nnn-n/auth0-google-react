@@ -1,6 +1,5 @@
 import React from 'react';
 import { login, isAuthenticated } from '../Auth';
-import { PROJECT_NAME } from '../constant'
 
 function Index(props) {
     return (
