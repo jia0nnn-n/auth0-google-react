@@ -3,14 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-
 import * as auth from './Auth'
 
 let state = {}
 let username = auth.getProfile()
 let initState = {
   name: username,
-  location: window.location.pathname.replace(/^\/?|\/$/g, ''),
+  location: window.location.pathname.replace(/^\/?|\/$/g, '').split('/')[1] ?? '',
   auth
 }
 

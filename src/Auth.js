@@ -1,14 +1,16 @@
 
-import auth0 from 'auth0-js'
-import jwtDecode from 'jwt-decode'
-const LOGIN_SUCCESS_PAGE = 'user-privacy'
-const LOGIN_FAILED_PAGE = ''
+import auth0 from 'auth0-js';
+import jwtDecode from 'jwt-decode';
+import { PROJECT_NAME } from './constant'
+const LOGIN_SUCCESS_PAGE = `${PROJECT_NAME}/user-privacy`;
+const LOGIN_FAILED_PAGE = `${PROJECT_NAME}`;
 
+const host = process.env.ENV === 'prod' ? `https://jia0nnn-n.github.io/auth0-google-react/${PROJECT_NAME}` : `http://localhost:3000/${PROJECT_NAME}`;
 
 const auth = new auth0.WebAuth({
     domain: 'dev--fjtj9b2.us.auth0.com',
     clientID: 'c8AlWkVeRX9ynTeGqVx0re3jbAbC834Y',
-    redirectUri: 'http://localhost:3000/va',
+    redirectUri: `${host}/va`,
     audience: 'https://dev--fjtj9b2.us.auth0.com/userinfo',
     responseType: 'token id_token',
     scope: 'openid profile'
