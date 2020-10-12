@@ -7,8 +7,9 @@ import * as serviceWorker from './serviceWorker';
 import * as auth from './Auth'
 
 let state = {}
+let username = auth.getProfile()
 let initState = {
-  name: 'jia0',
+  name: username,
   location: window.location.pathname.replace(/^\/?|\/$/g, ''),
   auth
 }

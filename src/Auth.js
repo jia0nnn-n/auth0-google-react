@@ -1,6 +1,6 @@
 
 import auth0 from 'auth0-js'
-
+import jwtDecode from 'jwt-decode'
 const LOGIN_SUCCESS_PAGE = 'user-privacy'
 const LOGIN_FAILED_PAGE = ''
 
@@ -42,4 +42,13 @@ export const logout = () => {
     localStorage.removeItem('id_token')
     localStorage.removeItem('expires_at')
     window.location.pathname = LOGIN_FAILED_PAGE
+}
+
+export const getProfile = () => {
+    const token = localStorage.getItem('id_token')
+    if (token) {
+        const data = jwtDecode(token);
+        return data.name
+    }
+    else return null
 }
